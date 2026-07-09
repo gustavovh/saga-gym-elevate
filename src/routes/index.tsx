@@ -69,19 +69,19 @@ const services = [
     icon: Sparkles,
     title: "Pilates",
     desc: "Clases individuales y grupales para fuerza, postura y control corporal.",
-    image: pilatesImg,
+    image: pilatesImg.url,
   },
   {
     icon: Bike,
     title: "Spinning",
     desc: "Cardio de alta intensidad en un ambiente energético e inmersivo.",
-    image: spinningImg,
+    image: spinningImg.url,
   },
   {
     icon: Activity,
     title: "Redcord",
     desc: "Suspensión neuromuscular para movilidad, estabilidad y prevención.",
-    image: redcordImg,
+    image: redcordImg.url,
   },
   {
     icon: Waves,
@@ -92,9 +92,22 @@ const services = [
     icon: Dumbbell,
     title: "Entrenamiento Funcional",
     desc: "Programas para hombres y mujeres orientados a resultados reales.",
-    image: functionalImg,
+    image: functionalImg.url,
+  },
+  {
+    icon: Dumbbell,
+    title: "LesMills BodyPump",
+    desc: "Clases grupales con barra y música: quemá grasa y tonificá todo el cuerpo.",
+    image: bodypumpImg.url,
+  },
+  {
+    icon: Sparkles,
+    title: "Pilates Duo",
+    desc: "Entrenamiento en pareja con reformer: técnica personalizada, doble motivación.",
+    image: pilatesDuoImg.url,
   },
 ];
+
 
 const schedule = [
   { day: "Lunes a Viernes", hours: "05:30 — 22:00" },
