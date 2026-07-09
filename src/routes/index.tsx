@@ -10,16 +10,25 @@ import {
   MapPin,
   MessageCircle,
   Phone,
+  Shield,
+  ShieldCheck,
   Sparkles,
+  TrendingUp,
   Waves,
+  Wind,
+  Zap,
 } from "lucide-react";
 import logo from "@/assets/sagalogo.png.asset.json";
 import heroImg from "@/assets/hero-training.jpg";
-import pilatesImg from "@/assets/pilates.jpg";
-import spinningImg from "@/assets/spinning.jpg";
-import functionalImg from "@/assets/functional.jpg";
-import redcordImg from "@/assets/redcord.jpg";
-import communityImg from "@/assets/community.jpg";
+import pilatesImg from "@/assets/pilates-reformer.jpg.asset.json";
+import spinningImg from "@/assets/spinning-real.jpg.asset.json";
+import functionalImg from "@/assets/cardio-floor.jpg.asset.json";
+import redcordImg from "@/assets/neurac-training.jpg.asset.json";
+import communityImg from "@/assets/community-real.jpg.asset.json";
+import neuracRoomImg from "@/assets/neurac-room.jpg.asset.json";
+import pilatesDuoImg from "@/assets/pilates-duo.jpg.asset.json";
+import bodypumpImg from "@/assets/bodypump.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,19 +69,19 @@ const services = [
     icon: Sparkles,
     title: "Pilates",
     desc: "Clases individuales y grupales para fuerza, postura y control corporal.",
-    image: pilatesImg,
+    image: pilatesImg.url,
   },
   {
     icon: Bike,
     title: "Spinning",
     desc: "Cardio de alta intensidad en un ambiente energético e inmersivo.",
-    image: spinningImg,
+    image: spinningImg.url,
   },
   {
     icon: Activity,
     title: "Redcord",
     desc: "Suspensión neuromuscular para movilidad, estabilidad y prevención.",
-    image: redcordImg,
+    image: redcordImg.url,
   },
   {
     icon: Waves,
@@ -83,9 +92,22 @@ const services = [
     icon: Dumbbell,
     title: "Entrenamiento Funcional",
     desc: "Programas para hombres y mujeres orientados a resultados reales.",
-    image: functionalImg,
+    image: functionalImg.url,
+  },
+  {
+    icon: Dumbbell,
+    title: "LesMills BodyPump",
+    desc: "Clases grupales con barra y música: quemá grasa y tonificá todo el cuerpo.",
+    image: bodypumpImg.url,
+  },
+  {
+    icon: Sparkles,
+    title: "Pilates Duo",
+    desc: "Entrenamiento en pareja con reformer: técnica personalizada, doble motivación.",
+    image: pilatesDuoImg.url,
   },
 ];
+
 
 const schedule = [
   { day: "Lunes a Viernes", hours: "05:30 — 22:00" },
@@ -121,6 +143,8 @@ function Index() {
       <Hero />
       <Marquee />
       <Services />
+      <Signature />
+      <Benefits />
       <Schedule />
       <Testimonials />
       <Location />
@@ -129,6 +153,123 @@ function Index() {
     </div>
   );
 }
+
+function Signature() {
+  return (
+    <section id="metodos" className="relative py-24 sm:py-32">
+      <div className="container-x">
+        <div className="mb-16 max-w-2xl">
+          <p className="text-xs uppercase tracking-[0.3em] text-primary">Métodos exclusivos</p>
+          <h2 className="mt-3 font-display text-4xl font-bold uppercase sm:text-6xl">
+            Servicios que nos <span className="text-gradient-gold">distinguen</span>
+          </h2>
+          <p className="mt-6 text-muted-foreground">
+            Tecnología y metodología de vanguardia aplicadas a tu bienestar. Diseñado para acelerar
+            tu recuperación y potenciar tu rendimiento.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          <SignatureCard
+            tag="NEURAC · Método Noruego"
+            title="Neuromuscular Activation"
+            desc="Entrená en suspensión con el método noruego que revoluciona la rehabilitación y el rendimiento deportivo. Corregí tu postura, eliminá el dolor y activá tu fuerza interior con Redcord."
+            image={neuracRoomImg.url}
+            cta="Descubrí NEURAC"
+          />
+          <SignatureCard
+            tag="KIMVENT · Terapéutico Avanzado"
+            title="Gimnasio Terapéutico"
+            desc="Recuperá tu energía y mejorá tu capacidad física con un sistema diseñado para tu bienestar. KIMVENT combina fuerza, ventilación y movimiento para que vuelvas más fuerte que nunca."
+            image={functionalImg.url}
+            cta="Probá KIMVENT"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SignatureCard({
+  tag,
+  title,
+  desc,
+  image,
+  cta,
+}: {
+  tag: string;
+  title: string;
+  desc: string;
+  image: string;
+  cta: string;
+}) {
+  return (
+    <article className="group relative overflow-hidden rounded-3xl border border-border bg-surface">
+      <div className="aspect-[16/10] overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
+      </div>
+      <div className="relative -mt-20 p-8">
+        <span className="inline-block rounded-full border border-primary/40 bg-background/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-primary backdrop-blur">
+          {tag}
+        </span>
+        <h3 className="mt-4 font-display text-3xl uppercase tracking-wide sm:text-4xl">{title}</h3>
+        <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">{desc}</p>
+        <a
+          href={WHATSAPP}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
+        >
+          {cta}
+          <MessageCircle className="h-4 w-4" />
+        </a>
+      </div>
+    </article>
+  );
+}
+
+const benefits = [
+  { icon: ShieldCheck, label: "Reducí el dolor" },
+  { icon: TrendingUp, label: "Mejorá tu postura" },
+  { icon: Zap, label: "Recuperá tu energía" },
+  { icon: Shield, label: "Prevení lesiones" },
+  { icon: Wind, label: "Optimizá tu rendimiento" },
+];
+
+function Benefits() {
+  return (
+    <section className="border-y border-border bg-surface/40 py-20">
+      <div className="container-x">
+        <div className="mb-12 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-primary">Beneficios</p>
+          <h2 className="mt-3 font-display text-3xl font-bold uppercase sm:text-5xl">
+            Lo que vas a sentir
+          </h2>
+        </div>
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          {benefits.map((b) => (
+            <li
+              key={b.label}
+              className="group flex flex-col items-center gap-4 rounded-2xl border border-border bg-background/60 p-6 text-center transition hover:border-primary/60"
+            >
+              <span className="grid h-14 w-14 place-items-center rounded-full bg-primary/15 text-primary transition group-hover:scale-110">
+                <b.icon className="h-6 w-6" />
+              </span>
+              <span className="font-display text-sm uppercase tracking-widest">{b.label}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
 
 function Nav() {
   return (
@@ -376,7 +517,7 @@ function Testimonials() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div className="relative overflow-hidden rounded-3xl border border-border">
             <img
-              src={communityImg}
+              src={communityImg.url}
               alt="Comunidad SAGA GYM"
               loading="lazy"
               className="h-full w-full object-cover"
