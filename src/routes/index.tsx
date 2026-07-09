@@ -112,14 +112,14 @@ const services = [
     desc: "Entrenamiento en pareja con reformer: técnica personalizada, doble motivación.",
     image: pilatesDuoImg.url,
   },
-];
+] as const;
 
 
 const schedule = [
   { day: "Lunes a Viernes", hours: "05:30 — 22:00" },
   { day: "Sábados", hours: "07:00 — 14:00" },
   { day: "Domingos", hours: "Cerrado" },
-];
+] as const;
 
 const testimonials = [
   {
@@ -140,7 +140,7 @@ const testimonials = [
     quote:
       "El mejor gimnasio de Asunción. Instalaciones impecables y una comunidad que te empuja a ser mejor.",
   },
-];
+] as const;
 
 function Index() {
   return (
@@ -179,14 +179,14 @@ function Signature() {
           <SignatureCard
             tag="NEURAC · Método Noruego"
             title="Neuromuscular Activation"
-            desc="Entrená en suspensión con el método noruego que revoluciona la rehabilitación y el rendimiento deportivo. Corregí tu postura, eliminá el dolor y activá tu fuerza interior[...]
+            desc="Entrená en suspensión con el método noruego que revoluciona la rehabilitación y el rendimiento deportivo. Corregí tu postura, eliminá el dolor y activá tu fuerza interior"
             image={neuracBrandImg.url}
             cta="Descubrí NEURAC"
           />
           <SignatureCard
             tag="KIMVENT · Terapéutico Avanzado"
             title="Gimnasio Terapéutico"
-            desc="Recuperá tu energía y mejorá tu capacidad física con un sistema diseñado para tu bienestar. KIMVENT combina fuerza, ventilación y movimiento para que vuelvas más fuerte q[...]
+            desc="Recuperá tu energía y mejorá tu capacidad física con un sistema diseñado para tu bienestar. KIMVENT combina fuerza, ventilación y movimiento para que vuelvas más fuerte"
             image={kimventBrandImg.url}
             cta="Probá KIMVENT"
           />
@@ -230,7 +230,7 @@ function SignatureCard({
           href={WHATSAPP}
           target="_blank"
           rel="noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] tran[...]
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
         >
           {cta}
           <MessageCircle className="h-4 w-4" />
@@ -246,7 +246,7 @@ const benefits = [
   { icon: Zap, label: "Recuperá tu energía" },
   { icon: Shield, label: "Prevení lesiones" },
   { icon: Wind, label: "Optimizá tu rendimiento" },
-];
+] as const;
 
 function Benefits() {
   return (
@@ -311,7 +311,7 @@ function Nav() {
           href={WHATSAPP}
           target="_blank"
           rel="noreferrer"
-          className="shrink-0 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-1[...]
+          className="shrink-0 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
         >
           Reservar
         </a>
@@ -353,14 +353,14 @@ function Hero() {
               href={WHATSAPP}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] trans[...]
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
             >
               Reservá tu clase
               <MessageCircle className="h-4 w-4" />
             </a>
             <a
               href="#servicios"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-8 py-4 text-sm font-semibold uppercase tracking-widest backdrop-blur transition hover:bg[...]
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-8 py-4 text-sm font-semibold uppercase tracking-widest backdrop-blur transition hover:bg-surface/80"
             >
               Ver disciplinas
             </a>
@@ -493,7 +493,7 @@ function Schedule() {
             </a>
             <a
               href={`tel:${PHONE_1}`}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold uppercase tracking-widest transition hover:bg-surface-elevated[...]
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold uppercase tracking-widest transition hover:bg-surface-elevated"
             >
               <Phone className="h-4 w-4" /> Llamar
             </a>
@@ -615,7 +615,7 @@ function Location() {
               href={WHATSAPP}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] trans[...]
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
             >
               <MessageCircle className="h-4 w-4" /> Agendar por WhatsApp
             </a>
@@ -723,7 +723,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="container-x mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs uppercase tracking-widest text-muted-foreground sm:flex-row sm:items-ce[...]
+      <div className="container-x mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs uppercase tracking-widest text-muted-foreground sm:flex-row sm:items-center">
         <span>© {new Date().getFullYear()} SAGA GYM. Todos los derechos reservados.</span>
         <span>Asunción, Paraguay</span>
       </div>
@@ -738,7 +738,7 @@ function WhatsAppFab() {
       target="_blank"
       rel="noreferrer"
       aria-label="Reservar por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-background shadow-[0_10px_40px_-10px_oklch(0.68_0.18_150/0.9)] transition hover:scale-[...]
+      className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-background shadow-[0_10px_40px_-10px_oklch(0.68_0.18_150/0.9)] transition hover:scale-110"
       style={{ animation: "pulse-ring 1.8s ease-out infinite" }}
     >
       <MessageCircle className="h-6 w-6" />
