@@ -22,11 +22,11 @@ import logo from "@/assets/sagalogo.png.asset.json";
 import heroImg from "@/assets/hero-training.jpg";
 import pilatesImg from "@/assets/pilates-studio.jpg.asset.json";
 import spinningImg from "@/assets/spinning-hd.jpg.asset.json";
-import functionalImg from "@/assets/cardio-floor.jpg.asset.json";
-import redcordImg from "@/assets/neurac-training.jpg.asset.json";
+import functionalImg from "@/assets/funcional-hd.jpg.asset.json";
+import redcordImg from "@/assets/redcord-hd.jpg.asset.json";
 import communityImg from "@/assets/community-hd.jpg.asset.json";
 
-import pilatesDuoImg from "@/assets/pilates-cadillac.jpg.asset.json";
+import pilatesDuoImg from "@/assets/pilates-duo-hd.jpg.asset.json";
 import bodypumpImg from "@/assets/bodypump.jpg.asset.json";
 import waterrowerImg from "@/assets/waterrower.jpg.asset.json";
 import terapeuticoImg from "@/assets/terapeutico.jpg.asset.json";
