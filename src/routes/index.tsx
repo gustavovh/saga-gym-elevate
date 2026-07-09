@@ -25,9 +25,13 @@ import spinningImg from "@/assets/spinning-real.jpg.asset.json";
 import functionalImg from "@/assets/cardio-floor.jpg.asset.json";
 import redcordImg from "@/assets/neurac-training.jpg.asset.json";
 import communityImg from "@/assets/community-real.jpg.asset.json";
-import neuracRoomImg from "@/assets/neurac-room.jpg.asset.json";
+
 import pilatesDuoImg from "@/assets/pilates-duo.jpg.asset.json";
 import bodypumpImg from "@/assets/bodypump.jpg.asset.json";
+import waterrowerImg from "@/assets/waterrower.jpg.asset.json";
+import terapeuticoImg from "@/assets/terapeutico.jpg.asset.json";
+import neuracBrandImg from "@/assets/neurac-brand.jpg.asset.json";
+import kimventBrandImg from "@/assets/kimvent-brand.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -64,6 +68,7 @@ const services = [
     icon: Heart,
     title: "Gimnasio Terapéutico",
     desc: "Rehabilitación y acondicionamiento guiado por profesionales de la salud.",
+    image: terapeuticoImg.url,
   },
   {
     icon: Sparkles,
@@ -87,6 +92,7 @@ const services = [
     icon: Waves,
     title: "WaterRower",
     desc: "Remo con resistencia de agua: full body, bajo impacto, alta demanda.",
+    image: waterrowerImg.url,
   },
   {
     icon: Dumbbell,
@@ -174,14 +180,14 @@ function Signature() {
             tag="NEURAC · Método Noruego"
             title="Neuromuscular Activation"
             desc="Entrená en suspensión con el método noruego que revoluciona la rehabilitación y el rendimiento deportivo. Corregí tu postura, eliminá el dolor y activá tu fuerza interior con Redcord."
-            image={neuracRoomImg.url}
+            image={neuracBrandImg.url}
             cta="Descubrí NEURAC"
           />
           <SignatureCard
             tag="KIMVENT · Terapéutico Avanzado"
             title="Gimnasio Terapéutico"
             desc="Recuperá tu energía y mejorá tu capacidad física con un sistema diseñado para tu bienestar. KIMVENT combina fuerza, ventilación y movimiento para que vuelvas más fuerte que nunca."
-            image={functionalImg.url}
+            image={kimventBrandImg.url}
             cta="Probá KIMVENT"
           />
         </div>
