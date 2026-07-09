@@ -179,14 +179,14 @@ function Signature() {
           <SignatureCard
             tag="NEURAC · Método Noruego"
             title="Neuromuscular Activation"
-            desc="Entrená en suspensión con el método noruego que revoluciona la rehabilitación y el rendimiento deportivo. Corregí tu postura, eliminá el dolor y activá tu fuerza interior con Redcord."
+            desc="Entrená en suspensión con el método noruego que revoluciona la rehabilitación y el rendimiento deportivo. Corregí tu postura, eliminá el dolor y activá tu fuerza interior[...]
             image={neuracBrandImg.url}
             cta="Descubrí NEURAC"
           />
           <SignatureCard
             tag="KIMVENT · Terapéutico Avanzado"
             title="Gimnasio Terapéutico"
-            desc="Recuperá tu energía y mejorá tu capacidad física con un sistema diseñado para tu bienestar. KIMVENT combina fuerza, ventilación y movimiento para que vuelvas más fuerte que nunca."
+            desc="Recuperá tu energía y mejorá tu capacidad física con un sistema diseñado para tu bienestar. KIMVENT combina fuerza, ventilación y movimiento para que vuelvas más fuerte q[...]
             image={kimventBrandImg.url}
             cta="Probá KIMVENT"
           />
@@ -230,7 +230,7 @@ function SignatureCard({
           href={WHATSAPP}
           target="_blank"
           rel="noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] tran[...]
         >
           {cta}
           <MessageCircle className="h-4 w-4" />
@@ -278,11 +278,27 @@ function Benefits() {
 
 
 function Nav() {
+  const getImageSrc = (logoObj: typeof logo) => {
+    // Asegura que la URL siempre sea absoluta
+    const url = logoObj.url;
+    if (url.startsWith('http')) return url;
+    if (url.startsWith('/')) return url;
+    return `/${url}`;
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/50 bg-background/70 backdrop-blur-xl">
       <div className="container-x grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3">
         <a href="#top" className="flex shrink-0 items-center gap-2">
-          <img src={logo.url} alt="SAGA GYM" className="h-10 w-10 rounded-md object-contain" />
+          <img 
+            src={getImageSrc(logo)} 
+            alt="SAGA GYM" 
+            className="h-10 w-10 rounded-md object-contain" 
+            onError={(e) => {
+              // Fallback si la imagen no carga
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
+          />
           <span className="font-display text-lg tracking-widest">SAGA GYM</span>
         </a>
         <nav className="hidden justify-center gap-8 text-sm uppercase tracking-widest text-muted-foreground md:flex">
@@ -295,7 +311,7 @@ function Nav() {
           href={WHATSAPP}
           target="_blank"
           rel="noreferrer"
-          className="shrink-0 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
+          className="shrink-0 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-1[...]
         >
           Reservar
         </a>
@@ -337,14 +353,14 @@ function Hero() {
               href={WHATSAPP}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:scale-[1.02] hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] trans[...]
             >
               Reservá tu clase
               <MessageCircle className="h-4 w-4" />
             </a>
             <a
               href="#servicios"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-8 py-4 text-sm font-semibold uppercase tracking-widest backdrop-blur transition hover:bg-surface-elevated"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-8 py-4 text-sm font-semibold uppercase tracking-widest backdrop-blur transition hover:bg[...]
             >
               Ver disciplinas
             </a>
@@ -477,7 +493,7 @@ function Schedule() {
             </a>
             <a
               href={`tel:${PHONE_1}`}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold uppercase tracking-widest transition hover:bg-surface-elevated"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold uppercase tracking-widest transition hover:bg-surface-elevated[...]
             >
               <Phone className="h-4 w-4" /> Llamar
             </a>
@@ -599,7 +615,7 @@ function Location() {
               href={WHATSAPP}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] trans[...]
             >
               <MessageCircle className="h-4 w-4" /> Agendar por WhatsApp
             </a>
@@ -645,12 +661,28 @@ function ContactRow({
 }
 
 function Footer() {
+  const getImageSrc = (logoObj: typeof logo) => {
+    // Asegura que la URL siempre sea absoluta
+    const url = logoObj.url;
+    if (url.startsWith('http')) return url;
+    if (url.startsWith('/')) return url;
+    return `/${url}`;
+  };
+
   return (
     <footer className="border-t border-border bg-background py-14">
       <div className="container-x grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="SAGA GYM" className="h-12 w-12 rounded-md object-contain" />
+            <img 
+              src={getImageSrc(logo)} 
+              alt="SAGA GYM" 
+              className="h-12 w-12 rounded-md object-contain" 
+              onError={(e) => {
+                // Fallback si la imagen no carga
+                (e.target as HTMLImageElement).style.display = 'none';
+              }}
+            />
             <span className="font-display text-xl tracking-widest">SAGA GYM</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
@@ -691,7 +723,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="container-x mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs uppercase tracking-widest text-muted-foreground sm:flex-row sm:items-center">
+      <div className="container-x mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs uppercase tracking-widest text-muted-foreground sm:flex-row sm:items-ce[...]
         <span>© {new Date().getFullYear()} SAGA GYM. Todos los derechos reservados.</span>
         <span>Asunción, Paraguay</span>
       </div>
@@ -706,7 +738,7 @@ function WhatsAppFab() {
       target="_blank"
       rel="noreferrer"
       aria-label="Reservar por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-background shadow-[0_10px_40px_-10px_oklch(0.68_0.18_150/0.9)] transition hover:scale-105"
+      className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-background shadow-[0_10px_40px_-10px_oklch(0.68_0.18_150/0.9)] transition hover:scale-[...]
       style={{ animation: "pulse-ring 1.8s ease-out infinite" }}
     >
       <MessageCircle className="h-6 w-6" />
