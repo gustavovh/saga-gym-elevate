@@ -25,7 +25,7 @@ import spinningImg from "@/assets/spinning-real.jpg.asset.json";
 import functionalImg from "@/assets/cardio-floor.jpg.asset.json";
 import redcordImg from "@/assets/neurac-training.jpg.asset.json";
 import communityImg from "@/assets/community-real.jpg.asset.json";
-import neuracRoomImg from "@/assets/neurac-room.jpg.asset.json";
+
 import pilatesDuoImg from "@/assets/pilates-duo.jpg.asset.json";
 import bodypumpImg from "@/assets/bodypump.jpg.asset.json";
 import waterrowerImg from "@/assets/waterrower.jpg.asset.json";
