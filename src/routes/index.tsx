@@ -10,16 +10,25 @@ import {
   MapPin,
   MessageCircle,
   Phone,
+  Shield,
+  ShieldCheck,
   Sparkles,
+  TrendingUp,
   Waves,
+  Wind,
+  Zap,
 } from "lucide-react";
 import logo from "@/assets/sagalogo.png.asset.json";
 import heroImg from "@/assets/hero-training.jpg";
-import pilatesImg from "@/assets/pilates.jpg";
-import spinningImg from "@/assets/spinning.jpg";
-import functionalImg from "@/assets/functional.jpg";
-import redcordImg from "@/assets/redcord.jpg";
-import communityImg from "@/assets/community.jpg";
+import pilatesImg from "@/assets/pilates-reformer.jpg.asset.json";
+import spinningImg from "@/assets/spinning-real.jpg.asset.json";
+import functionalImg from "@/assets/cardio-floor.jpg.asset.json";
+import redcordImg from "@/assets/neurac-training.jpg.asset.json";
+import communityImg from "@/assets/community-real.jpg.asset.json";
+import neuracRoomImg from "@/assets/neurac-room.jpg.asset.json";
+import pilatesDuoImg from "@/assets/pilates-duo.jpg.asset.json";
+import bodypumpImg from "@/assets/bodypump.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
