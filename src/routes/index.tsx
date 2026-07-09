@@ -398,7 +398,7 @@ function Testimonials() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div className="relative overflow-hidden rounded-3xl border border-border">
             <img
-              src={communityImg}
+              src={communityImg.url}
               alt="Comunidad SAGA GYM"
               loading="lazy"
               className="h-full w-full object-cover"
