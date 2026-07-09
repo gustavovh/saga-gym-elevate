@@ -28,6 +28,10 @@ import communityImg from "@/assets/community-real.jpg.asset.json";
 import neuracRoomImg from "@/assets/neurac-room.jpg.asset.json";
 import pilatesDuoImg from "@/assets/pilates-duo.jpg.asset.json";
 import bodypumpImg from "@/assets/bodypump.jpg.asset.json";
+import waterrowerImg from "@/assets/waterrower.jpg.asset.json";
+import terapeuticoImg from "@/assets/terapeutico.jpg.asset.json";
+import neuracBrandImg from "@/assets/neurac-brand.jpg.asset.json";
+import kimventBrandImg from "@/assets/kimvent-brand.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
