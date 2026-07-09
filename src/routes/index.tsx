@@ -92,6 +92,7 @@ const services = [
     icon: Waves,
     title: "WaterRower",
     desc: "Remo con resistencia de agua: full body, bajo impacto, alta demanda.",
+    image: waterrowerImg.url,
   },
   {
     icon: Dumbbell,
