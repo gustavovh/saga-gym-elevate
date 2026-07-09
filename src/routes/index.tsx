@@ -174,10 +174,6 @@ function Hero() {
 
       <div className="container-x flex min-h-[86vh] flex-col justify-center py-20">
         <div className="max-w-3xl animate-fade-up">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-muted-foreground backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Asunción · Paraguay
-          </div>
           <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight sm:text-7xl md:text-8xl">
             Planificá tu semana.
             <br />
