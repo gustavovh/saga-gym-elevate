@@ -278,26 +278,14 @@ function Benefits() {
 
 
 function Nav() {
-  const getImageSrc = (logoObj: typeof logo) => {
-    // Asegura que la URL siempre sea absoluta
-    const url = logoObj.url;
-    if (url.startsWith('http')) return url;
-    if (url.startsWith('/')) return url;
-    return `/${url}`;
-  };
-
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/50 bg-background/70 backdrop-blur-xl">
       <div className="container-x grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3">
         <a href="#top" className="flex shrink-0 items-center gap-2">
           <img 
-            src={getImageSrc(logo)} 
+            src={logo.url} 
             alt="SAGA GYM" 
             className="h-10 w-10 rounded-md object-contain" 
-            onError={(e) => {
-              // Fallback si la imagen no carga
-              (e.target as HTMLImageElement).style.display = 'none';
-            }}
           />
           <span className="font-display text-lg tracking-widest">SAGA GYM</span>
         </a>
@@ -661,27 +649,15 @@ function ContactRow({
 }
 
 function Footer() {
-  const getImageSrc = (logoObj: typeof logo) => {
-    // Asegura que la URL siempre sea absoluta
-    const url = logoObj.url;
-    if (url.startsWith('http')) return url;
-    if (url.startsWith('/')) return url;
-    return `/${url}`;
-  };
-
   return (
     <footer className="border-t border-border bg-background py-14">
       <div className="container-x grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
             <img 
-              src={getImageSrc(logo)} 
+              src={logo.url} 
               alt="SAGA GYM" 
               className="h-12 w-12 rounded-md object-contain" 
-              onError={(e) => {
-                // Fallback si la imagen no carga
-                (e.target as HTMLImageElement).style.display = 'none';
-              }}
             />
             <span className="font-display text-xl tracking-widest">SAGA GYM</span>
           </div>
