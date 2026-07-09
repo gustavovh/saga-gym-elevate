@@ -68,6 +68,7 @@ const services = [
     icon: Heart,
     title: "Gimnasio Terapéutico",
     desc: "Rehabilitación y acondicionamiento guiado por profesionales de la salud.",
+    image: terapeuticoImg.url,
   },
   {
     icon: Sparkles,
