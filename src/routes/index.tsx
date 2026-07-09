@@ -180,14 +180,14 @@ function Signature() {
             tag="NEURAC · Método Noruego"
             title="Neuromuscular Activation"
             desc="Entrená en suspensión con el método noruego que revoluciona la rehabilitación y el rendimiento deportivo. Corregí tu postura, eliminá el dolor y activá tu fuerza interior con Redcord."
-            image={neuracRoomImg.url}
+            image={neuracBrandImg.url}
             cta="Descubrí NEURAC"
           />
           <SignatureCard
             tag="KIMVENT · Terapéutico Avanzado"
             title="Gimnasio Terapéutico"
             desc="Recuperá tu energía y mejorá tu capacidad física con un sistema diseñado para tu bienestar. KIMVENT combina fuerza, ventilación y movimiento para que vuelvas más fuerte que nunca."
-            image={functionalImg.url}
+            image={kimventBrandImg.url}
             cta="Probá KIMVENT"
           />
         </div>
